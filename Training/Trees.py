@@ -4,12 +4,27 @@ class node:
     self.right=None
     self.left=None
 
-  def preorder(root):
+def preorder(root):
     if root==None:
       return
     print(root.value)
-    print(root.left)
-    print(root.right)
+    preorder(root.left)
+    preorder(root.right)
+
+def inorder(root):
+    if root==None:
+      return 
+    inorder(root.left)
+    print(root.value)
+    inorder(root.right)
+
+def postorder(root):
+    if root==None:
+      return 
+    postorder(root.left)
+    postorder(root.right)
+    print(root.value)    
+
 
 if __name__=="__main__":
   root = node(1)
@@ -21,3 +36,7 @@ if __name__=="__main__":
   root.right.right=node(7)
 print("The preorder traversal is:")
 preorder(root)      
+print("The inorder traversal is:")
+inorder(root)
+print("The postorder traversal is:")
+postorder(root)
