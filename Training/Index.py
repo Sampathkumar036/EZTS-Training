@@ -1,3 +1,5 @@
+# problem solved using slicing
+
 S='ABABABCANFKABABCNKABABCACNDA'
 P='ABABCA'
 index=[]
